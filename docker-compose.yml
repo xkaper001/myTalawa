@@ -19,7 +19,7 @@ services:
     networks:
       - talawa-network
     volumes:
-      - /home/denji/machines/talawa-api:/data 
+      - ~/machines/talawa-api:/data 
 networks:
       talawa-network:
         driver: bridge
