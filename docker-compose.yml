@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  talawa-api:
+    image: debian:latest
+    container_name: talawa-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    ports:
+      - 27017:27017
+      - 9000:9000
+      - 9001:9001
+      - 4000:4000
+      - 4001:4001
+      - 6379:6379
+      - 4040:4040
+    networks:
+      - talawa-network
+    volumes:
+      - /home/denji/machines/talawa-api:/data 
+networks:
+      talawa-network:
+        driver: bridge
