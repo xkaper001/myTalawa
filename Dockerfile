@@ -6,7 +6,7 @@ COPY install.sh /install.sh
 # Make the script executable
 RUN chmod +x /install.sh && \
     apt-get update && \
-    apt-get install -y git curl vim wget redis-server && \
+    apt-get install -y git curl vim wget redis-server systemctl && \
     apt-get clean
 
 # Start with bash and execute the script

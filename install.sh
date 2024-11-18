@@ -13,9 +13,15 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-nvm install --lts
-nvm use --lts
-node -v
+if ! command -v node &> /dev/null
+then
+    echo 'Installing Node.js...'
+    nvm install --lts
+    nvm use --lts
+    node -v
+else
+    echo 'Node.js is already installed'
+fi
 
 npm install -g typescript
 
@@ -30,7 +36,4 @@ fi
 
 service redis-server start # port 6379  
 
-# wget https://dl.min.io/server/minio/release/linux-amd64/archive/minio_20240817012454.0.0_amd64.deb -O minio.deb
-# dpkg -i minio.deb
-
-echo "DOCKER SETUP COMPLETED !!"
+echo "DOCKER SETUP COMPLETED !!!"
