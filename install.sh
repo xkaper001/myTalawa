@@ -30,7 +30,7 @@ fi
 
 service redis-server start # port 6379  
 
-wget https://dl.min.io/server/minio/release/linux-amd64/archive/minio_20240817012454.0.0_amd64.deb -O minio.deb
-dpkg -i minio.deb
+# wget https://dl.min.io/server/minio/release/linux-amd64/archive/minio_20240817012454.0.0_amd64.deb -O minio.deb
+# dpkg -i minio.deb
 
 echo "DOCKER SETUP COMPLETED !!"
