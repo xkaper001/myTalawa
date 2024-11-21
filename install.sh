@@ -30,6 +30,7 @@ if [ ! -d "data/talawa-api" ]; then
     cd data
     git clone https://github.com/PalisadoesFoundation/talawa-api
     cd talawa-api
+    git checkout develop
 else
     cd data/talawa-api
 fi
