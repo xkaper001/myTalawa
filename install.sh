@@ -16,8 +16,8 @@ export NVM_DIR="$HOME/.nvm"
 if ! command -v node &> /dev/null
 then
     echo 'Installing Node.js...'
-    nvm install --lts
-    nvm use --lts
+    nvm install 20.18.1
+    nvm use 20.18.1
     node -v
 else
     echo 'Node.js is already installed'

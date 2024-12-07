@@ -20,7 +20,7 @@ services:
     networks:
       - talawa-network
     volumes:
-      - ~/machines/talawa-api:/data 
+      - /home/denji/code/flutter/open_source/PalisadoesFoundation/talawa-api:/data 
 networks:
       talawa-network:
         driver: bridge
